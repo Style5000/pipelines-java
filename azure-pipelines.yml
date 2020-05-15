@@ -1,7 +1,7 @@
 jobs:
-- job: myJob
-  timeoutInMinutes: 10
-  pool:
-    vmImage: 'ubuntu-16.04'
+- job: A
   steps:
-  - bash: echo "Hello world"
+    - bash: echo "From JOB A"
+- job: B
+  steps:
+    - bash: echo "From JOB B"
