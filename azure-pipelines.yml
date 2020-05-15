@@ -1,7 +1,9 @@
-jobs:
-- job: A
-  steps:
-    - bash: echo "From JOB A"
-- job: B
-  steps:
-    - bash: echo "From JOB B"
+stages:
+  - stage: A
+    jobs:
+      - job: A1
+      - job: A2
+  - stage: B
+    jobs:
+      - job: B1
+      - job: B2
