@@ -1,8 +1,13 @@
 stages:
   - stage: A
     jobs:
-      - job: A1
-      - job: A2
+      - job: Debug
+        steps:
+          - bash: echo "Hello from debug"
+      - job: Release
+        dependsOn: Debug
+        steps:
+          - bash: echo "Hello from Relase"
   - stage: B
     jobs:
       - job: B1
